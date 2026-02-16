@@ -24,7 +24,7 @@ function App() {
     <>
       {isLoading && <BootAnimation onComplete={() => setIsLoading(false)} />}
       <CartProvider>
-          <Router>
+          <Router basename="/website/">
             <CartDrawer />
             <Routes>
               <Route path="/" element={<Home bags={bags} />} />
