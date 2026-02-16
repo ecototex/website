@@ -9,7 +9,7 @@ export const bags: Bag[] = [
     price: '₹ 400/-',
     whatsappProductId: '9727067520638217',
     plasticOffset: 40,
-    imagePath: '/assets/images/tote bag.png',
+    imagePath: '/assets/images/optimized/tote bag.jpg',
     colors: ['#556B2F', '#4A5D23'], // Olive Green, Mehandi
     dimensions: '34cm x 36cm',
     capacityKg: 10.0,
@@ -25,7 +25,7 @@ export const bags: Bag[] = [
     weight: '450g',
     price: '₹ 750/-',
     plasticOffset: 80,
-    imagePath: '/assets/images/Travel Bag.png',
+    imagePath: '/assets/images/optimized/Travel Bag.jpg',
     colors: ['#0000FF', '#4A5D23', '#A52A2A'], // Blue, Mehandi Green, Brown
     dimensions: '40cm x 35cm x 21cm',
     capacityKg: 20.0,
@@ -41,7 +41,7 @@ export const bags: Bag[] = [
     weight: '400g',
     price: '₹ 650/-',
     plasticOffset: 60,
-    imagePath: '/assets/images/cotton Travel Bag.png',
+    imagePath: '/assets/images/optimized/cotton Travel Bag.jpg',
     colors: ['#008000', '#A52A2A'], // Green, Brown
     dimensions: '40cm x 35cm x 21cm',
     capacityKg: 20.0,
@@ -57,7 +57,7 @@ export const bags: Bag[] = [
     weight: '200g',
     price: '₹ 300/-',
     plasticOffset: 150,
-    imagePath: '/assets/images/Grocery Bag.png',
+    imagePath: '/assets/images/optimized/Grocery Bag.jpg',
     colors: ['#008000', '#4A5D23', '#A52A2A'], // Green, Mehandi, Brown
     dimensions: '40cm x 21cm x 20cm',
     capacityKg: 15.0,
@@ -73,7 +73,7 @@ export const bags: Bag[] = [
     weight: '180g',
     price: '₹ 350/-',
     plasticOffset: 30,
-    imagePath: '/assets/images/Sling Bag.png',
+    imagePath: '/assets/images/optimized/Sling Bag.jpg',
     colors: ['#808080'], // Generic denim grey/blue as specific color wasn't mentioned, implies jeans color
     dimensions: '21cm x 27cm x 5cm',
     capacityKg: 5.0,
@@ -89,7 +89,7 @@ export const bags: Bag[] = [
     weight: '600g',
     price: '₹ 2500/-',
     plasticOffset: 100,
-    imagePath: '/assets/images/Pockify Bag.png',
+    imagePath: '/assets/images/optimized/Pockify Bag.jpg',
     colors: ['#6F4E37'], // Coffee Brown
     dimensions: '45cm x 27cm x 45cm',
     capacityKg: 25.0,
@@ -105,7 +105,7 @@ export const bags: Bag[] = [
     weight: '250g',
     price: '₹ 400/-',
     plasticOffset: 40,
-    imagePath: '/assets/images/Brown Tote.png',
+    imagePath: '/assets/images/optimized/Brown Tote.jpg',
     colors: ['#A52A2A'], // Brown
     dimensions: '34cm x 36cm',
     capacityKg: 10.0,
@@ -121,7 +121,7 @@ export const bags: Bag[] = [
     weight: '600g',
     price: '₹ 2500/-',
     plasticOffset: 100,
-    imagePath: '/assets/images/pockfi olive.png',
+    imagePath: '/assets/images/optimized/pockfi olive.jpg',
     colors: ['#556B2F'], // Olive Green
     dimensions: '45cm x 27cm x 45cm',
     capacityKg: 25.0,

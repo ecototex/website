@@ -29,6 +29,7 @@ const ProductCard = ({ bag }: Props) => {
             <motion.img 
                 src={bag.imagePath} 
                 alt={bag.name}
+                loading="lazy"
                 className="h-[200px] w-[200px] object-contain drop-shadow-xl"
                 layoutId={`image-${bag.code}`}
             />

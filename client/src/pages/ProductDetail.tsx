@@ -107,7 +107,7 @@ const ProductDetail = () => {
                             </span>
                         </div>
 
-                        <h1 className="font-miluno text-6xl lg:text-7xl mb-6 text-black leading-tight">
+                        <h1 className="font-miluno text-4xl lg:text-7xl mb-4 lg:mb-6 text-black leading-tight">
                             {bag.name}
                         </h1>
 
