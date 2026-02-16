@@ -1,7 +1,6 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaArrowLeft } from 'react-icons/fa';
 import { Bag } from '../types';
@@ -24,7 +23,6 @@ const ProductDetail = () => {
     // Helper for message text
     const productQuantity = (qty: number) => qty;
 
-import { bags } from '../data/bags';
 
     useEffect(() => {
         // Find product from static data
