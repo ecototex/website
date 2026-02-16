@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="bg-white text-deepSlate py-12 px-6">
             <div className="max-w-4xl mx-auto text-center">
                 <img 
-                    src="/assets/images/ECO TOTEX_logo.png" 
+                    src={`${import.meta.env.BASE_URL}assets/images/ECO TOTEX_logo.png`}
                     alt="ECOTOTEX" 
                     className="h-32 mx-auto mb-6 object-contain"
                 />

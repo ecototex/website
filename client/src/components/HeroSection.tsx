@@ -13,7 +13,7 @@ const HeroSection = () => {
       >
          <div className="absolute inset-0 bg-black/30 z-10 mix-blend-multiply" />
          <img 
-           src="/assets/images/parallax_hero_background.png" 
+           src={`${import.meta.env.BASE_URL}assets/images/parallax_hero_background.png`} 
            alt="Hero Background" 
            className="w-full h-full object-cover"
          />
@@ -22,7 +22,7 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6">
         <img 
-            src="/assets/images/ECO TOTEX_header_logo.png" 
+            src={`${import.meta.env.BASE_URL}assets/images/ECO TOTEX_header_logo.png`} 
             alt="ECOTOTEX" 
             className="h-24 md:h-32 object-contain drop-shadow-lg mb-4"
         />

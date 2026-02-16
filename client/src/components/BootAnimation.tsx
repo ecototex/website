@@ -29,7 +29,7 @@ const BootAnimation = ({ onComplete }: { onComplete: () => void }) => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <img 
-                            src="/assets/images/ECO TOTEX_logo.png" 
+                            src={`${import.meta.env.BASE_URL}assets/images/ECO TOTEX_logo.png`}
                             alt="ECOTOTEX" 
                             className="w-64 h-auto object-contain"
                         />
