@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bag } from '../types';
-import { FaRecycle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {
@@ -14,68 +13,47 @@ const ProductCard = ({ bag }: Props) => {
 
   return (
     <div 
-      className="relative w-full max-w-[240px] h-[320px] md:h-[400px] mx-auto cursor-pointer" 
+      className="relative w-full group cursor-pointer" 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => navigate(`/product/${bag.code}`)}
     >
-        {/* Floating Image */}
-        <motion.div
-            className="absolute left-0 right-0 mx-auto z-20 flex justify-center top-10"
-            initial={{ y: 0 }}
-            animate={{ y: isHovered ? -15 : 0 }} // Gentle float
-            transition={{ type: "spring", stiffness: 100, damping: 12 }}
-        >
-            <motion.img 
-                src={bag.imagePath} 
-                alt={bag.name}
-                loading="lazy"
-                className="h-[200px] w-[200px] object-contain drop-shadow-xl"
-                layoutId={`image-${bag.code}`}
-            />
-        </motion.div>
-
-        {/* Glass Card Base */}
-        <motion.div
-            className="absolute bottom-0 w-full h-[300px] rounded-[28px] overflow-hidden border border-deepSlate/10 glass-panel"
-            animate={{ 
-                scale: isHovered ? 1.05 : 1,
-                rotate: isHovered ? 1 : 0,
-                boxShadow: isHovered ? '0 10px 20px rgba(59, 73, 83, 0.1)' : 'none'
-            }}
-            transition={{ duration: 0.3 }}
-        >
-            <div className="absolute inset-0 bg-gradient-to-br from-sageTint/20 to-white/10" />
-            
-            <div className="relative h-full p-4 flex flex-col justify-end items-center text-center z-10">
-                {/* Product Code */}
-                <h3 className="font-mono text-deepSlate font-bold text-base opacity-90">
+        <div className="aspect-[3/4] w-full bg-[#f8f8f8] rounded-xl overflow-hidden relative mb-4 transition-all duration-300 group-hover:shadow-lg border border-gray-100">
+            {/* Minimal Tag */}
+            <div className="absolute top-3 right-3 z-10">
+                 <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase bg-white px-2 py-1 rounded-sm border border-gray-100">
                     {bag.code}
-                </h3>
-                
-                {/* Product Name */}
-                <h2 className="font-mono text-deepSlate text-xs mt-1 leading-tight w-full line-clamp-2">
-                    {bag.name}
-                </h2>
-
-                <div className="flex justify-center items-center gap-2 w-full mt-3">
-                    {/* Feature Pill */}
-                    <div className="px-2 py-1 rounded-full bg-leafGreen/10 border border-leafGreen/30 text-[10px] font-bold text-leafGreen">
-                        {bag.weight}
-                    </div>
-
-                    {/* Plastic Offset */}
-                    <div className="flex items-center gap-0.5 text-forestMoss text-[10px] font-bold">
-                        <FaRecycle size={14} />
-                        <span>-{bag.plasticOffset}</span>
-                    </div>
-                </div>
-                
-                <div className="mt-2 text-deepSlate font-bold font-mono text-sm">
-                    {bag.price}
-                </div>
+                 </span>
             </div>
-        </motion.div>
+
+            <motion.div
+                className="w-full h-full flex items-center justify-center p-6"
+                animate={{ scale: isHovered ? 1.05 : 1 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+                <img 
+                    src={bag.imagePath} 
+                    alt={bag.name}
+                    loading="lazy"
+                    className="w-full h-full object-contain mix-blend-multiply opacity-95 group-hover:opacity-100 transition-opacity"
+                />
+            </motion.div>
+
+            {/* Subtle Overlay on Hover */}
+            <div className={`absolute inset-0 bg-black/5 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
+        </div>
+
+        {/* Minimal Info */}
+        <div className="text-center px-2">
+            <h3 className="font-miluno text-lg text-black mb-1 leading-tight group-hover:text-leafGreen transition-colors">
+                {bag.name}
+            </h3>
+            <div className="flex items-center justify-center gap-3 text-sm font-mono text-gray-500">
+                <span>{bag.price}</span>
+                <span className="w-1 h-1 rounded-full bg-gray-300" />
+                <span>{bag.weight}</span>
+            </div>
+        </div>
     </div>
   );
 };
