@@ -24,7 +24,7 @@ function App() {
     <>
       {isLoading && <BootAnimation onComplete={() => setIsLoading(false)} />}
       <CartProvider>
-          <Router basename="/website/">
+          <Router basename={import.meta.env.VITE_GITHUB_PAGES === 'true' ? '/website/' : '/'}>
             <CartDrawer />
             <Routes>
               <Route path="/" element={<Home bags={bags} />} />

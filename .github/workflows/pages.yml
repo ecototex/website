@@ -34,6 +34,9 @@ jobs:
           npm ci
           
       - name: Build
+        env:
+          GITHUB_PAGES: 'true'
+          VITE_GITHUB_PAGES: 'true'
         run: |
           cd client
           npm run build
