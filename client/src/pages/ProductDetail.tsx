@@ -76,7 +76,7 @@ const ProductDetail = () => {
                     <div className="absolute w-[500px] h-[500px] bg-white rounded-full blur-3xl opacity-60" />
 
                     <motion.img 
-                        src={bag.imagePath} 
+                        src={`${import.meta.env.BASE_URL}${bag.imagePath}`} 
                         alt={bag.name}
                         className="relative w-[80%] max-w-[500px] object-contain drop-shadow-2xl z-10"
                         layoutId={`image-${bag.code}`}
