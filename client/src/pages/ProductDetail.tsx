@@ -23,16 +23,17 @@ const ProductDetail = () => {
     // Helper for message text
     const productQuantity = (qty: number) => qty;
 
+import { bags } from '../data/bags';
+
     useEffect(() => {
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
-        axios.get(`${apiUrl}/api/products/${code}`)
-            .then(res => {
-                setBag(res.data);
-                if (res.data.colors.length > 0) {
-                    setSelectedColor(res.data.colors[0]);
-                }
-            })
-            .catch(console.error);
+        // Find product from static data
+        const product = bags.find(b => b.code === code);
+        if (product) {
+            setBag(product);
+            if (product.colors.length > 0) {
+                setSelectedColor(product.colors[0]);
+            }
+        }
     }, [code]);
 
     useEffect(() => {

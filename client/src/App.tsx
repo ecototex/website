@@ -7,15 +7,18 @@ import BootAnimation from './components/BootAnimation';
 import { CartProvider } from './context/CartContext';
 import CartDrawer from './components/CartDrawer';
 
+import { bags as staticBags } from './data/bags';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [bags, setBags] = useState([]);
+  const [bags, setBags] = useState(staticBags);
 
   useEffect(() => {
-    // Prefetch data while animation is playing
-    axios.get('/api/products')
-      .then(res => setBags(res.data))
-      .catch(console.error);
+    // Simulate loading for animation
+    const timer = setTimeout(() => {
+        setIsLoading(false); 
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
