@@ -39,7 +39,7 @@ const Home = ({ bags }: { bags: Bag[] }) => {
                     <span className="font-mono text-deepSlate text-sm tracking-widest">LOADING COLLECTION...</span>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-12 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 gap-y-12 max-w-7xl mx-auto px-2 md:px-0">
                     {bags.map(bag => (
                         <ProductCard key={bag.code} bag={bag} />
                     ))}

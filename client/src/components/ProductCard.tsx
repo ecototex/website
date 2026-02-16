@@ -14,7 +14,7 @@ const ProductCard = ({ bag }: Props) => {
 
   return (
     <div 
-      className="relative w-[240px] h-[400px] mx-auto cursor-pointer" 
+      className="relative w-full max-w-[240px] h-[320px] md:h-[400px] mx-auto cursor-pointer" 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => navigate(`/product/${bag.code}`)}
@@ -47,18 +47,18 @@ const ProductCard = ({ bag }: Props) => {
         >
             <div className="absolute inset-0 bg-gradient-to-br from-sageTint/20 to-white/10" />
             
-            <div className="relative h-full p-4 flex flex-col justify-end items-start z-10">
+            <div className="relative h-full p-4 flex flex-col justify-end items-center text-center z-10">
                 {/* Product Code */}
                 <h3 className="font-mono text-deepSlate font-bold text-base opacity-90">
                     {bag.code}
                 </h3>
                 
                 {/* Product Name */}
-                <h2 className="font-mono text-deepSlate text-xs mt-1 truncate w-full">
+                <h2 className="font-mono text-deepSlate text-xs mt-1 leading-tight w-full line-clamp-2">
                     {bag.name}
                 </h2>
 
-                <div className="flex justify-between items-center w-full mt-4">
+                <div className="flex justify-center items-center gap-2 w-full mt-3">
                     {/* Feature Pill */}
                     <div className="px-2 py-1 rounded-full bg-leafGreen/10 border border-leafGreen/30 text-[10px] font-bold text-leafGreen">
                         {bag.weight}

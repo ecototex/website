@@ -1,0 +1,37 @@
+#!/bin/bash
+TARGET="/var/www/ecototex"
+GIT_DIR="/var/repo/ecototex.git"
+BRANCH="main"
+
+while read oldrev newrev ref
+do
+    if [[ $ref = refs/heads/$BRANCH ]]; then
+        echo "==========================================="
+        echo "   🚀 Received Push to $BRANCH. Deploying..."
+        echo "==========================================="
+        
+        # 1. Checkout files
+        mkdir -p $TARGET
+        git --work-tree=$TARGET --git-dir=$GIT_DIR checkout -f $BRANCH
+        
+        # 2. Build Frontend
+        echo "📦 Installing Dependencies & Building..."
+        cd $TARGET/client
+        npm install
+        npm run build
+        
+        # 3. Setup Apache Serving (Ensure dist is served)
+        # Note: Apache config already points to /var/www/ecototex/client/dist from previous setup
+        # But we ensure permissions
+        chown -R www-data:www-data $TARGET/client/dist
+        
+        # 4. Restart Apache (Optional, but good for config changes)
+        systemctl reload apache2
+        
+        echo "==========================================="
+        echo "   ✅ Deployment Complete!"
+        echo "==========================================="
+    else
+        echo "Ref $ref received. Doing nothing: only $BRANCH branch is deployed."
+    fi
+done
