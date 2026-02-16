@@ -10,7 +10,7 @@ import { bags as staticBags } from './data/bags';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [bags, setBags] = useState(staticBags);
+  const [bags] = useState(staticBags);
 
   useEffect(() => {
     // Simulate loading for animation
