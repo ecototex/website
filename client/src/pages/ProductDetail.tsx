@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaArrowLeft } from 'react-icons/fa';
 import { Bag } from '../types';
@@ -9,6 +9,7 @@ import { LottieRefCurrentProps } from 'lottie-react';
 import LazyLottie from '../components/LazyLottie';
 import cartAnimation from '../assets/cart-animation.json';
 import { useCart } from '../context/CartContext';
+import { bags } from '../data/bags';
 
 const ProductDetail = () => {
     const { code } = useParams();

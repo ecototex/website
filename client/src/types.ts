@@ -11,9 +11,7 @@ export interface Bag {
   dimensions: string;
   capacityKg: number;
   features: {
-    waterResistant: boolean;
-    laptopSleeve: boolean;
-    usbPort: boolean;
+    [key: string]: boolean;
   };
   pocketCount: number;
   description: string;
