@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Milonga&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Miluno';
+  src: url('/assets/fonts/milunodemo/MilunoDEMO-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @apply bg-sageTint text-deepSlate font-miluno;
+  /* background-color: #E1E9E5; Matches bone/sageTint */
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-md border border-white/50 shadow-sm;
+}
