@@ -34,7 +34,7 @@ const ManifestoFooter = () => {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.instagram.com/eco.totex?igsh=MWYzcWpwOG5rOXkydQ=="
+                                    href="https://www.instagram.com/eco.totex"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="font-body text-sm text-warmCream/50 hover:text-warmCream transition-colors"
