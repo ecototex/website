@@ -9,7 +9,7 @@ export const bags: Bag[] = [
     price: '₹ 400/-',
     whatsappProductId: '9727067520638217',
     plasticOffset: 40,
-    imagePath: 'assets/images/optimized/tote bag.jpg',
+    imagePath: 'assets/images/Classic Jeans Tote.png',
     colors: ['#556B2F', '#4A5D23'], // Olive Green, Mehandi
     dimensions: '34cm x 36cm',
     capacityKg: 10.0,
@@ -25,7 +25,7 @@ export const bags: Bag[] = [
     weight: '450g',
     price: '₹ 750/-',
     plasticOffset: 80,
-    imagePath: 'assets/images/optimized/Travel Bag.jpg',
+    imagePath: 'assets/images/Denim Travel Master.png',
     colors: ['#0000FF', '#4A5D23', '#A52A2A'], // Blue, Mehandi Green, Brown
     dimensions: '40cm x 35cm x 21cm',
     capacityKg: 20.0,
@@ -34,22 +34,7 @@ export const bags: Bag[] = [
     description: 'Sturdy and spacious travel bag featuring 3 convenient pockets, designed to carry up to 20 kg of your essentials. Perfect for organized packing and comfortable travel.',
     sustainabilityStory: 'Built for the long haul, this travel bag repurposes heavy-duty denim to create a robust companion that offsets significant plastic usage.',
   },
-  {
-    code: 'TRV-002',
-    name: 'Printed Cotton Weekender',
-    material: 'Printed Cotton',
-    weight: '400g',
-    price: '₹ 650/-',
-    plasticOffset: 60,
-    imagePath: 'assets/images/optimized/cotton Travel Bag.jpg',
-    colors: ['#008000', '#A52A2A'], // Green, Brown
-    dimensions: '40cm x 35cm x 21cm',
-    capacityKg: 20.0,
-    features: { 'Lightweight': true, 'Spacious': true },
-    pocketCount: 3,
-    description: 'Sturdy and spacious travel bag featuring 3 convenient pockets, designed to carry up to 20 kg of your essentials. Perfect for organized packing and comfortable travel.',
-    sustainabilityStory: 'Crafted from vibrant printed cotton, this bag combines traditional aesthetics with modern sustainable practices.',
-  },
+
   {
     code: 'GRO-001',
     name: 'Eco Grocery Shopper',
@@ -57,7 +42,7 @@ export const bags: Bag[] = [
     weight: '200g',
     price: '₹ 300/-',
     plasticOffset: 150,
-    imagePath: 'assets/images/optimized/Grocery Bag.jpg',
+    imagePath: 'assets/images/Eco Grocery Shopper.png',
     colors: ['#008000', '#4A5D23', '#A52A2A'], // Green, Mehandi, Brown
     dimensions: '40cm x 21cm x 20cm',
     capacityKg: 15.0,
@@ -73,7 +58,7 @@ export const bags: Bag[] = [
     weight: '180g',
     price: '₹ 350/-',
     plasticOffset: 30,
-    imagePath: 'assets/images/optimized/Sling Bag.jpg',
+    imagePath: 'assets/images/Adjustable Sling.png',
     colors: ['#808080'], // Generic denim grey/blue as specific color wasn't mentioned, implies jeans color
     dimensions: '21cm x 27cm x 5cm',
     capacityKg: 5.0,
@@ -89,7 +74,7 @@ export const bags: Bag[] = [
     weight: '600g',
     price: '₹ 2500/-',
     plasticOffset: 100,
-    imagePath: 'assets/images/optimized/Pockify Bag.jpg',
+    imagePath: 'assets/images/Pockify Cotton Master.png',
     colors: ['#6F4E37'], // Coffee Brown
     dimensions: '45cm x 27cm x 45cm',
     capacityKg: 25.0,
