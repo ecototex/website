@@ -7,7 +7,7 @@ import CartDrawer from './components/CartDrawer';
 function App() {
   return (
     <CartProvider>
-      <Router basename={import.meta.env.VITE_GITHUB_PAGES ? '/website/' : '/'}>
+      <Router>
         <CartDrawer />
         <Routes>
           <Route path="/" element={<Home />} />
