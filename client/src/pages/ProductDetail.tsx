@@ -5,12 +5,14 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaLeaf } from 'react-icons/fa';
 import { Bag } from '../types';
 import { bags } from '../data/bags';
+import { useCart } from '../context/CartContext';
 
 const ProductDetail = () => {
     const { code } = useParams();
     const [bag, setBag] = useState<Bag | null>(null);
     const [selectedColor, setSelectedColor] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
+    const { addToCart, toggleCart } = useCart();
 
 
     useEffect(() => {
@@ -172,13 +174,13 @@ const ProductDetail = () => {
                             <div className="grid grid-cols-2 gap-3">
                                 <button
                                     onClick={() => {
-                                        const msg = `Hi, I'd like to place an order for *${quantity} units* of *${bag.name}* (${bag.code}). Please confirm availability and total amount.`;
-                                        window.open(`https://wa.me/917356939056?text=${encodeURIComponent(msg)}`, '_blank');
+                                        addToCart(bag, quantity, selectedColor || bag.colors[0] || 'default');
+                                        toggleCart();
                                     }}
                                     className="py-3 px-4 rounded-xl border border-deepEarth/10 hover:bg-deepEarth/5 text-deepEarth font-bold text-sm transition-colors flex flex-col items-center justify-center gap-1"
                                 >
-                                    <span>Order Now</span>
-                                    <span className="text-[10px] font-normal opacity-60">Via WhatsApp</span>
+                                    <span>Add to Cart</span>
+                                    <span className="text-[10px] font-normal opacity-60">Add items</span>
                                 </button>
                                 <button
                                     onClick={() => {
